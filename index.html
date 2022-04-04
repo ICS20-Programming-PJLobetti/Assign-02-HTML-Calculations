@@ -1,79 +1,40 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8" />
-    <meta name="description" content="Calculating your spped in Kilometers, with JavaScript"/>
-    <meta name="keywords" content="immaculata, ics2o"/>
-    <meta name="author" content="PJ Lobetti"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <link rel="apple-touch-icon" sizes="180x180" href="./fav_index/apple-touch-icon.png"/>
-    <link rel="icon" type="image/png" sizes="32x32" href="./fav_index/favicon-32x32.png"/>
-    <link rel="icon" type="image/png" sizes="16x16" href="./fav_index/favicon-16x16.png"/>
-    <link rel="manifest" href="./fav_index/site.webmanifest" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
-    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.yellow-orange.min.css"/>
-    <link rel="stylesheet" href="./css/style.css"/>
-    <title>Calculating speed in kilometers, with JavaScript</title>
+    <meta charset="utf-8">
+    <meta name="description" content="User Input, with JavaScript">
+    <meta name="keywords" content="immaculata, ics2o">
+    <meta name="author" content="PJ Lobetti">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="apple-touch-icon" sizes="180x180" href="./fav/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./fav/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./fav/favicon-16x16.png">
+    <link rel="manifest" href="./fav/site.webmanifest">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.deep_orange-red.min.css" />
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Calculating Speed in Km/h, with a JS file</title>
   </head>
   <body>
-    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
     <script src="./js/script.js"></script>
-      <table>
-        <tr>
-          <th>
-            <h1>Calculating Speed, with JS</h1>
-            <img src="./images/speed(1).jpg" alt="triangle" width="75%" height="auto"/>
-          </th>
-          <th>
-              <h2>The Formula to Calculate Speed</h2>
-              <h3>Speed = Distance traveled / Time</h3>
-            </th>
-          </tr>
-        </table>
-        <!-- Simple Textfield -->
-        <form action="#">
-          <p>Distance</p>
-          <div class="mdl-textfield mdl-js-textfield">
-            <input
-              class="mdl-textfield__input"
-              type="text"
-              pattern="-?[0-9]*(\.[0-9]+)?"
-              id="distance-traveled"
-            />
-            <label class="mdl-textfield__label" for="distance-traveled">Distance...</label>
-            <span class="mdl-textfield__error">Input is not a number!</span>
-          </div>
-        </form>
-				
-        <!-- Numeric Textfield -->
-        <form action="#">
-          <p>Time</p>
-          <div class="mdl-textfield mdl-js-textfield">
-            <input
-              class="mdl-textfield__input"
-              type="text"
-              pattern="-?[0-9]*(\.[0-9]+)?"
-              id="time-traveled"
-            />
-            <label class="mdl-textfield__label" for="time-traveled">Time...</label>
-            <span class="mdl-textfield__error">Input is not a number!</span>
-          </div>
-        </form>
-				
-        <!-- Raised button with ripple -->
-        <button
-          class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"
-          onclick="calculate()"
-        >
-          Calculate Speed
-        </button>
-        <br/>
-        <p>
-          <div id="answers">
-            <div id="speed"></div>
-          </div>
-        </p>
-      </main>
-    </div>
+    <h1>Calculating Speed in Km/h, with JS </h1>
+    <p>
+      <h3>Please enter your distance and time you travelled information:</h3>
+      <form action="javascript:buttonClicked()">
+        <label for="Distance">Distance Travelled:</label>
+        <input type="number" step="any" id="distance" placeholder="Distance"><br><br>
+        <label for="Hours-travelled">Hours Travelled: </label>
+        <input type="number" step="any" id="hours" placeholder="Hours"><br><br>
+        <!-- Accent-colored raised button with ripple -->
+<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
+  Calculate
+</button>
+      </form>
+    </p>
+		<!-- Create a space where the user information will be displayed -->
+		<div id="display-results">
+    	<div id="speed"></div>
+		</div>
+    <center><h3>An Image of What Real Speed Looks Like:</h3></center>
+    <center><img src="./images/lightningspeed.jpg" alt="Speed"></center>
   </body>
 </html>

@@ -4,18 +4,20 @@
 // Created on: April 2022
 // This file contains the JS functions for index.html
 
-'use strict'
+"use strict"
+
+
 /**
- * This function calculates the speed in kilometers.
+ * This function calculates speed.
  */
-function calculate () {
-  // input
-  const distance = parseFloat(document.getElementById('distance-traveled').value)
-  const time = parseFloat(document.getElementById('time-traveled').value)
+function buttonClicked () {
+  // get user input
+  let distance = parseFloat(document.getElementById('distance').value)
+  let hours = parseFloat(document.getElementById('hours').value)
 
-  // process
-  const speed = (distance / time) 
+  // calculate the speed
+  let speed = distance / hours
 
-  // output
-  document.getElementById('speed').innerHTML = 'The Speed youre travelling is: ' + speed + ' km/h'.toFixed(2)
+  // display the results
+  document.getElementById('speed').innerHTML = "Your speed will be " + speed.toFixed(2) + "km/h"
 }
